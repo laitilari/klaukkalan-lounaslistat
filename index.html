@@ -96,33 +96,39 @@
         .hamburger {
           display: block; /* Make the hamburger icon visible */
           cursor: pointer; /* Indicate it's clickable */
-          color: white; /* White color for the hamburger icon */
-          font-size: 30px; /* Large size for the hamburger icon */
-          padding: 10px; /* Padding around the icon */
+          color: #3498db; /* Change color to blue */
+          font-size: 50px; /* Make it larger for better visibility */
+          padding: 10px 0; /* Add more vertical padding */
+          transition: 0.3s ease; /* Smooth transition for hover and click */
+          width: 80%; /* Make the hamburger take up most of the mobile screen width */
+          text-align: center; /* Center the hamburger icon horizontally */
+          margin: 0 auto; /* Center the hamburger icon */
         }
 
         /* Style for the individual hamburger lines */
         .hamburger div {
-          width: 25px; /* Width of the hamburger lines */
-          height: 3px; /* Height of the hamburger lines */
-          margin: 4px 0; /* Space between the hamburger lines */
-          background-color: white; /* White color for the lines */
+          width: 50%; /* Increase width of the hamburger lines */
+          height: 6px; /* Thicker lines for better visibility */
+          margin: 6px auto; /* Center the lines and add space between them */
+          background-color: #3498db; /* Set the line color to blue */
           transition: 0.3s; /* Smooth transition for hamburger lines */
+          border-radius: 4px; /* Rounded corners for the lines */
         }
-      }
 
-      /* Additional effect for the hamburger icon when clicked (optional) */
-      @media (max-width: 768px) {
+        /* Additional effect for the hamburger icon when clicked (optional) */
         .hamburger.active div:nth-child(1) {
-          transform: rotate(-45deg) translate(-5px, 6px); /* Rotate first line */
+          transform: rotate(-45deg) translate(-6px, 8px); /* Rotate first line */
+          background-color: #e74c3c; /* Change color to red */
+          margin-top: 2.5rem;
         }
 
         .hamburger.active div:nth-child(2) {
-          opacity: 0; /* Hide middle line */
+          opacity: 0; /* Hide the middle line */
         }
 
         .hamburger.active div:nth-child(3) {
-          transform: rotate(45deg) translate(-5px, -6px); /* Rotate third line */
+          transform: rotate(45deg) translate(-6px, -8px); /* Rotate third line */
+          background-color: #e74c3c; /* Change color to red */
         }
       }
 
