@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Klaukkala's lunch options on one web page."
+    />
+    <meta name="author" content="Ilari Laitinen" />
+    <title>Lunches in Klaukkala</title>
+    <style>
+      iframe {
+        border: 2px solid #333;
+        width: 100%;
+        height: 500px;
+      }
+
+      header,
+      footer {
+        background-color: #333; /* Dark background for the header */
+        color: white; /* White text color for contrast */
+        padding: 20px 0; /* Vertical padding */
+        text-align: center; /* Center-align the header text */
+      }
+
+      /* Navigation container */
+      nav {
+        display: flex; /* Flexbox to create a horizontal layout */
+        justify-content: center; /* Center the items horizontally */
+        align-items: center; /* Center the items vertically */
+      }
+
+      /* Navigation list styling */
+      nav ul {
+        list-style-type: none; /* Remove default list bullets */
+        padding: 0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
+        display: flex; /* Lay out the items horizontally */
+      }
+
+      /* Style for navigation list items */
+      nav li {
+        margin: 0 15px; /* Space out the navigation items */
+      }
+
+      /* Style for navigation links */
+      nav a {
+        text-decoration: none; /* Remove underline from links */
+        color: white; /* White text for the links */
+        font-size: 1.2em; /* Slightly larger font size */
+        font-weight: bold; /* Bold text for emphasis */
+        padding: 10px 15px; /* Padding inside the links */
+        border-radius: 5px; /* Rounded corners */
+        transition: background-color 0.3s ease; /* Smooth background color transition on hover */
+      }
+
+      /* Hover effect for the navigation links */
+      nav a:hover {
+        background-color: #e74c3c; /* Red background on hover */
+        color: white; /* Keep text white when hovered */
+      }
+
+      /* Active state for links */
+      nav a:active {
+        background-color: #c0392b; /* Darker red when clicked */
+      }
+
+      h1 {
+        font-family: "Georgia", serif; /* Elegant serif font for a strong, classic feel */
+        font-size: 3em; /* Larger than usual to stand out as the main title */
+        color: white; /* A rich, dark blue-gray color for a professional look */
+        margin-bottom: 20px; /* Space below the title */
+        text-align: center; /* Center-align the title */
+        text-transform: capitalize; /* Capitalize the first letter of each word */
+        letter-spacing: 1px; /* Add slight spacing between letters */
+        font-weight: bold; /* Make the title bold for emphasis */
+        border-bottom: 3px solid #e74c3c; /* Add a red underline for emphasis */
+        padding-bottom: 15px; /* Space below the text to separate it from the underline */
+        line-height: 1.2; /* Adjust line height for better visual balance */
+      }
+
+      h2 {
+        font-family: "Arial", sans-serif; /* Set a clean, modern font */
+        font-size: 2em; /* Slightly larger than normal text */
+        color: #333; /* Dark gray color for readability */
+        margin-bottom: 20px; /* Add space below the heading */
+        text-align: center; /* Center the heading */
+        text-transform: uppercase; /* Make the text uppercase */
+        letter-spacing: 2px; /* Add spacing between letters */
+        border-bottom: 2px solid #007bff; /* Add a colored border at the bottom */
+        padding-bottom: 10px; /* Add some padding below the text */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Lounaat Klaukkalassa</h1>
+      <nav>
+        <ul>
+          <li><a href="#section1">AIDA</a></li>
+          <li><a href="#section2">Ararat</a></li>
+          <li><a href="#section3">Brunni</a></li>
+          <li><a href="#section4">Hugo</a></li>
+          <li><a href="#section5">Ismet</a></li>
+          <li><a href="#section6">Madmar</a></li>
+          <li><a href="#section7">Pihvimylläri</a></li>
+          <li><a href="#section8">Resunga</a></li>
+          <li><a href="#section9">Viki</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="section1">
+        <h2>AIDA</h2>
+        <iframe
+          src="https://www.kahvilaaida.fi/lounas"
+          title="AIDA"
+          loading="lazy"
+        >
+          Your browser does not support iframes.
+        </iframe>
+      </section>
+
+      <section id="section2">
+        <h2>Ararat</h2>
+        <p>
+          <iframe
+            src="https://www.klaukkalaararat.fi/"
+            title="Ararat"
+            loading="lazy"
+          >
+            Your browser does not support iframes.
+          </iframe>
+        </p>
+      </section>
+
+      <section id="section3">
+        <h2>Brunni</h2>
+        <p>
+          <iframe
+            src="https://www.ravintolabrunni.fi/lounas"
+            title="Brunni"
+            loading="lazy"
+          >
+            Your browser does not support iframes.
+          </iframe>
+        </p>
+      </section>
+
+      <section id="section4">
+        <h2>Hugo</h2>
+        <p>
+          <iframe
+            src="http://www.uudenmaanleipa.fi/fi/lounas/"
+            title="Hugo"
+            loading="lazy"
+          >
+            Your browser does not support iframes.
+          </iframe>
+        </p>
+      </section>
+
+      <section id="section5">
+        <h2>Ismet</h2>
+        <p>
+          <iframe src="https://ismetklaukkala.fi/" title="Ismet" loading="lazy">
+            Your browser does not support iframes.
+          </iframe>
+        </p>
+      </section>
+
+      <section id="section6">
+        <h2>Madmar</h2>
+        <p>
+          <iframe
+            src="https://madmarcatering.fi/madmar-lounas/#lounasmenu"
+            title="Madmar"
+            loading="lazy"
+          >
+            Your browser does not support iframes.
+          </iframe>
+        </p>
+      </section>
+
+      <section id="section7">
+        <h2>Pihvimylläri</h2>
+        <p>
+          <iframe
+            src="https://www.pihvimyllari.fi/lunch.php#menu"
+            title="Pihvimylläri"
+            loading="lazy"
+          >
+            Your browser does not support iframes.
+          </iframe>
+        </p>
+      </section>
+
+      <section id="section8">
+        <h2>Resunga</h2>
+        <p>
+          <iframe
+            src="https://restadeal.fi/menu/23/1/lunch?name=Resunga"
+            title="Resunga"
+            loading="lazy"
+          >
+            Your browser does not support iframes.
+          </iframe>
+        </p>
+      </section>
+
+      <section id="section9">
+        <h2>Viki</h2>
+        <p>
+          <iframe
+            src="https://ravintolaviki.fi/lounaslista.html#main"
+            title="Viki"
+            loading="lazy"
+          >
+            Your browser does not support iframes.
+          </iframe>
+        </p>
+      </section>
+    </main>
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="#section1">AIDA</a></li>
+          <li><a href="#section2">Ararat</a></li>
+          <li><a href="#section3">Brunni</a></li>
+          <li><a href="#section4">Hugo</a></li>
+          <li><a href="#section5">Ismet</a></li>
+          <li><a href="#section6">Madmar</a></li>
+          <li><a href="#section7">Pihvimylläri</a></li>
+          <li><a href="#section8">Resunga</a></li>
+          <li><a href="#section9">Viki</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
