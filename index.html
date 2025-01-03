@@ -26,46 +26,104 @@
         text-align: center; /* Center-align the header text */
       }
 
-      /* Navigation container */
+      /* Import a nicer font (Google Fonts) */
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+      /* Style for the navigation container */
       nav {
-        display: flex; /* Flexbox to create a horizontal layout */
-        justify-content: center; /* Center the items horizontally */
-        align-items: center; /* Center the items vertically */
+        background-color: #2c3e50; /* Darker, sophisticated background */
+        padding: 15px 30px; /* Larger padding for a more spacious navbar */
+        border-radius: 8px; /* Rounded corners for the navbar */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow to give depth */
       }
 
-      /* Navigation list styling */
+      /* Style for the navigation list */
       nav ul {
-        list-style-type: none; /* Remove default list bullets */
-        padding: 0; /* Remove default padding */
-        margin: 0; /* Remove default margin */
-        display: flex; /* Lay out the items horizontally */
+        list-style: none; /* Remove default list styling */
+        padding: 0;
+        margin: 0;
+        display: flex; /* Horizontal layout */
+        justify-content: center; /* Center the navigation items */
+        font-family: "Roboto", sans-serif; /* Use the imported Roboto font */
       }
 
-      /* Style for navigation list items */
-      nav li {
-        margin: 0 15px; /* Space out the navigation items */
+      /* Style for each list item in the navigation */
+      nav ul li {
+        margin: 0 20px; /* Increased space between each item */
       }
 
-      /* Style for navigation links */
-      nav a {
-        text-decoration: none; /* Remove underline from links */
+      /* Style for the anchor links in the navbar */
+      nav ul li a {
         color: white; /* White text for the links */
-        font-size: 1.2em; /* Slightly larger font size */
-        font-weight: bold; /* Bold text for emphasis */
-        padding: 10px 15px; /* Padding inside the links */
-        border-radius: 5px; /* Rounded corners */
-        transition: background-color 0.3s ease; /* Smooth background color transition on hover */
+        text-decoration: none; /* Remove underline */
+        font-weight: 600; /* Slightly bolder text */
+        text-transform: uppercase; /* Uppercase for better emphasis */
+        font-size: 16px; /* Slightly larger font size for readability */
+        letter-spacing: 1px; /* Add some spacing between letters for a cleaner look */
+        transition: all 0.3s ease; /* Smooth transition for hover effects */
       }
 
-      /* Hover effect for the navigation links */
-      nav a:hover {
-        background-color: #e74c3c; /* Red background on hover */
-        color: white; /* Keep text white when hovered */
+      /* Hover effect for the links */
+      nav ul li a:hover {
+        color: #3498db; /* Change color to blue on hover */
+        transform: translateY(-2px); /* Lift the link slightly */
+        text-decoration: underline; /* Add underline on hover */
       }
 
-      /* Active state for links */
-      nav a:active {
-        background-color: #c0392b; /* Darker red when clicked */
+      /* Active link effect (when clicked) */
+      nav ul li a:active {
+        color: #e74c3c; /* Change color to red when the link is clicked */
+      }
+
+      /* Mobile-specific styles (when the screen width is 768px or smaller) */
+      @media (max-width: 768px) {
+        /* Make the navbar items stack vertically on smaller screens */
+        nav ul {
+          display: none; /* Hide the navigation items initially */
+          flex-direction: column; /* Stack them vertically */
+          width: 100%; /* Full width */
+          background-color: #2c3e50; /* Maintain the same background */
+          padding: 20px 0; /* Add padding */
+          text-align: center; /* Center the text */
+        }
+
+        /* Show the navigation items when the hamburger menu is clicked */
+        nav ul.show {
+          display: flex; /* Show the navigation items */
+        }
+
+        /* Style for the hamburger menu */
+        .hamburger {
+          display: block; /* Make the hamburger icon visible */
+          cursor: pointer; /* Indicate it's clickable */
+          color: white; /* White color for the hamburger icon */
+          font-size: 30px; /* Large size for the hamburger icon */
+          padding: 10px; /* Padding around the icon */
+        }
+
+        /* Style for the individual hamburger lines */
+        .hamburger div {
+          width: 25px; /* Width of the hamburger lines */
+          height: 3px; /* Height of the hamburger lines */
+          margin: 4px 0; /* Space between the hamburger lines */
+          background-color: white; /* White color for the lines */
+          transition: 0.3s; /* Smooth transition for hamburger lines */
+        }
+      }
+
+      /* Additional effect for the hamburger icon when clicked (optional) */
+      @media (max-width: 768px) {
+        .hamburger.active div:nth-child(1) {
+          transform: rotate(-45deg) translate(-5px, 6px); /* Rotate first line */
+        }
+
+        .hamburger.active div:nth-child(2) {
+          opacity: 0; /* Hide middle line */
+        }
+
+        .hamburger.active div:nth-child(3) {
+          transform: rotate(45deg) translate(-5px, -6px); /* Rotate third line */
+        }
       }
 
       h1 {
@@ -129,6 +187,12 @@
     <header>
       <h1>Lounaat Klaukkalassa</h1>
       <nav>
+        <!-- Hamburger menu icon (visible on mobile screens) -->
+        <div class="hamburger" onclick="toggleNavbar()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
         <ul>
           <li><a href="#section1">AIDA</a></li>
           <li><a href="#section2">Ararat</a></li>
@@ -261,5 +325,14 @@
         </ul>
       </nav>
     </footer>
+    <script>
+      // JavaScript function to toggle the navigation menu (hamburger menu)
+      function toggleNavbar() {
+        const navList = document.querySelector("nav ul");
+        const hamburger = document.querySelector(".hamburger");
+        navList.classList.toggle("show"); // Toggle the "show" class to display the navbar
+        hamburger.classList.toggle("active"); // Toggle the active class to animate the hamburger
+      }
+    </script>
   </body>
 </html>
